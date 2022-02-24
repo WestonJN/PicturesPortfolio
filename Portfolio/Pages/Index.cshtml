@@ -1,0 +1,27 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome To My Portfolio</h1>
+    <small class="text-muted">Below are a couple of images that I have taken throughout my journey of being a photographer. I hope you enjoy.</small>
+</div>
+
+
+<div class="container">
+
+    <div class="row align-self-start">
+        @foreach (var picture in Model.Pictures)
+        {
+            <img class="img-fluid" style="width:22rem; height:18rem;" src="@picture.Image" alt="Card image cap">
+
+        }
+    </div>
+
+</div>
+
+
+
+
